@@ -1,0 +1,24 @@
+.appointments {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointments h2 {
+    color: #1abc9c;
+}
+
+.appointments table {
+    width: 80%;
+}
+
+.appointments thead tr th {
+    width: 150px;
+    text-align: left;
+    padding: 8px;
+    background-color: #1abc9c;
+    color: white;
+}

@@ -1,0 +1,33 @@
+.appointment td{
+    width: 150px;
+    padding: 8px;
+}
+
+.even {
+    background-color: #badc58;
+}
+
+.odd {
+    background-color: #c7ecee;
+}
+
+.appointment .modify {
+    color: #3498db;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.appointment .delete {
+    color: #e74c3c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.appointment .modifyAppointment {
+    background: none;
+    border: none;
+}
+
+.appointment .modifyAppointment:focus {
+    outline: none;
+}
