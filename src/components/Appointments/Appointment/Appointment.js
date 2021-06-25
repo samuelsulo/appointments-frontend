@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { getDateNow } from '../../../global/functions/functions';
 import { deleteAppointment, updateAppointment } from '../../../actions/appointments';
 
 import './Appointment.css';
@@ -33,7 +34,7 @@ function Appointment( props ) {
     return (
         <tr className={`appointment ${props.class}`}>
             <td className={`activity `} >{!isModify ? props.appointment.activity : <input type="text" className="modifyAppointment" name="activity" autoFocus value={input.activity} onChange={handleChange}/>}</td>
-            <td className="date" >{!isModify ? props.appointment.date : <input type="date" className="modifyAppointment" name="date" value={input.date} onChange={handleChange}/>}</td>
+            <td className="date" >{!isModify ? props.appointment.date : <input type="date" className="modifyAppointment" name="date" min={getDateNow()} value={input.date} onChange={handleChange}/>}</td>
             <td className="time" >{!isModify ? props.appointment.time : <input type="time" className="modifyAppointment" name="time" value={input.time} onChange={handleChange}/>}</td>
             <td>
                 <span className="modify" onClick={modify}>{!isModify ? 'modify ' : 'update '}</span> 

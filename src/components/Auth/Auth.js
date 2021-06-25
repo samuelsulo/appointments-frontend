@@ -38,7 +38,11 @@ function Auth() {
     // form submit
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(auth(user, history, isSignup));
+        dispatch(auth(user, history, isSignup, setError));
+        if (error != null) {
+            if (isSignup) setUser({ ...user, email: ''});
+            else setUser({ ...user, email: '', password: ''});
+        }
     };
 
     return (

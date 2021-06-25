@@ -10,7 +10,8 @@ function Home() {
 
     return (
         <div>
-            {state.isLogged ? <Appointments /> : null}
+            {state.isLogged ? <Appointments /> : 
+             "Welcome to the home page Sign in to save all your appointments"}
         </div>
     )
 }

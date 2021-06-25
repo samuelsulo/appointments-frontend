@@ -1,6 +1,6 @@
 import * as api from '../api/index';
 
-export const auth = (user, history, isSignup) => async (dispatch) => {
+export const auth = (user, history, isSignup, setError) => async (dispatch) => {
     try {
         let res;
         if (isSignup)
@@ -16,7 +16,7 @@ export const auth = (user, history, isSignup) => async (dispatch) => {
 
         history.push('/');
     } catch (error) {
-        console.log(error.message);
+        setError(error.response.data.message);
     }
 }
 
